@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-space: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.logo-font {
+  font-family: var(--font-space);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.section-header {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.video-card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.35);
+}
+
+.category-pill.active {
+  background-color: #f97316;
+  color: white;
+  border-color: #f97316;
+}
+
+.live-badge {
+  animation: livePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.modal {
+  animation: modalPopIn 0.22s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+@keyframes modalPopIn {
+  from { opacity: 0; transform: scale(0.94) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.machine-gradient {
+  background: linear-gradient(145deg, #18181b 0%, #27251f 100%);
+}
